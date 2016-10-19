@@ -24,7 +24,6 @@ class OrganizationsController < ApplicationController
   # POST /organizations
   # POST /organizations.json
   def create
-    binding.pry
     @organization = Organization.new(organization_params)
 
     respond_to do |format|
@@ -63,14 +62,15 @@ class OrganizationsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_organization
-      @organization = Organization.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def organization_params
-      params.require(:organization).permit(:name, :contact_name, :contact_phone)
-      # params.fetch(:organization, {}).fetch(:name, :contact_name, :contact_phone)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_organization
+    @organization = Organization.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def organization_params
+    params.require(:organization).permit(:name, :contact_name, :contact_phone)
+    # params.fetch(:organization, {}).fetch(:name, :contact_name, :contact_phone)
+  end
 end
