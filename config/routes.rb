@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :projects
   resources :organizations
   root to: "home#index"
   get 'home/index'
