@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'mysql2'
@@ -34,6 +33,7 @@ group :development, :test do
   gem 'rb-readline'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'rubocop'
 end
 
 group :development do

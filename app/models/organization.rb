@@ -1,5 +1,5 @@
 class Organization < ActiveRecord::Base
-  # attr_accessor :name, :contact_name, :contact_phone
+  has_many :projects
 
-  # validates :name, presence: true
+  validates :name, presence: true
 end
