@@ -1,4 +1,5 @@
 require 'npp_spec_helper'
 
-RSpec.describe CommentsController, type: :controller do
+RSpec.describe ProjectsController, type: :controller do
+
 end
