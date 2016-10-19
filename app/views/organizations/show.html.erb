@@ -1,4 +1,21 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Name:</strong>
+  <%= @organization.name %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @organization.contact_name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <a href="tel:<%= @organization.contact_phone %>">
+    <%= @organization.contact_phone %>
+  </a>
+</p>
+
 <%= link_to 'Edit', edit_organization_path(@organization) %> |
 <%= link_to 'Back', organizations_path %>
